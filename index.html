@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Matheus - Desenvolvedor Front End</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav class="menu">
+    <ul>
+      <li><button onclick="scrollToSection('inicio')">Início</button></li>
+      <li><button onclick="scrollToSection('sobre')">Sobre</button></li>
+      <li><button onclick="scrollToSection('projetos')">Projetos</button></li>
+      <li><button onclick="scrollToSection('contato')">Contato</button></li>
+      <li>
+        <button id="btn-tema" onclick="alternarTema()" aria-label="Alternar tema">🌙</button>
+      </li>
+      <li>
+        <button id="btn-lang" aria-label="Alternar idioma">🇧🇷</button>
+      </li>
+    </ul>
+  </nav>
+
+  <section id="inicio" class="secao">
+    <div class="container-inicio">
+      <div class="lado-esquerdo fade-in">
+        <h1>Olá, sou um<br />Desenvolvedor<br /><span class="destaque">Front-End</span></h1>
+      </div>
+
+      <div class="lado-direito fade-in">
+        <img src="img/foto-matheus.jpg" alt="Foto de Matheus" class="foto-redonda" />
+        <h2>Matheus</h2>
+        <p class="profissao">Desenvolvedor Front-End</p>
+        <p class="bio">Apaixonado por tecnologia, criativo e focado em interfaces modernas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="secao">
+    <h2>Sobre</h2>
+    <p>Alguma descrição sobre você aqui...</p>
+  </section>
+
+  <section id="projetos" class="secao">
+    <h2>Projetos</h2>
+    <div class="container-projetos">
+      <div class="projeto-card">
+        <a href="projects/Download/download.html" target="_blank">
+          <img src="img/download.png" alt="Projeto 1" />
+          <p>Download</p>
+        </a>
+      </div>
+      <div class="projeto-card">
+        <a href="#" target="_blank">
+          <img src="img/projeto2.png" alt="Projeto 2" />
+          <p>Projeto 2</p>
+        </a>
+      </div>
+      <div class="projeto-card">
+        <a href="#" target="_blank">
+          <img src="img/projeto3.png" alt="Projeto 3" />
+          <p>Projeto 3</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="secao">
+    <h2>Contato</h2>
+    <form action="https://formspree.io/f/mdkzkjpj" method="post" class="form-contato">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Escreva seu nome aqui" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Coloque seu email aqui" required />
+      </div>
+      <div class="form-group">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua dúvida aqui" required></textarea>
+      </div>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </section>
+
+  <script src="animações.js"></script>
+</body>
+
+</html>
